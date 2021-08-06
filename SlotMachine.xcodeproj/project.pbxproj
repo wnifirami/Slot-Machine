@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA14F77226BDD6F600839FCC /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14F77126BDD6F600839FCC /* InfoView.swift */; };
+		EA14F77426BDE6D300839FCC /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14F77326BDE6D300839FCC /* PlaySound.swift */; };
 		EA73656426BC35B4009B26D9 /* SlotMachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA73656326BC35B4009B26D9 /* SlotMachineApp.swift */; };
 		EA73656626BC35B4009B26D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA73656526BC35B4009B26D9 /* ContentView.swift */; };
 		EA73656826BC35B6009B26D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA73656726BC35B6009B26D9 /* Assets.xcassets */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA14F77126BDD6F600839FCC /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		EA14F77326BDE6D300839FCC /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		EA14F77526BDE87400839FCC /* SlotMachine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlotMachine.entitlements; sourceTree = "<group>"; };
 		EA73656026BC35B4009B26D9 /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA73656326BC35B4009B26D9 /* SlotMachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineApp.swift; sourceTree = "<group>"; };
 		EA73656526BC35B4009B26D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		EA73656226BC35B4009B26D9 /* SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
+				EA14F77526BDE87400839FCC /* SlotMachine.entitlements */,
 				EA73658326BC378C009B26D9 /* Views */,
 				EA73658426BC3796009B26D9 /* Helpers */,
 				EA73658226BC377F009B26D9 /* Sounds */,
@@ -116,6 +122,7 @@
 				EA73656526BC35B4009B26D9 /* ContentView.swift */,
 				EA73658526BC3B38009B26D9 /* LogoView.swift */,
 				EA73658B26BC40F5009B26D9 /* ReelView.swift */,
+				EA14F77126BDD6F600839FCC /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 			children = (
 				EA73658726BC3B67009B26D9 /* Modifiers.swift */,
 				EA73658926BC3EE3009B26D9 /* Extensions.swift */,
+				EA14F77326BDE6D300839FCC /* PlaySound.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -207,11 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA73658C26BC40F5009B26D9 /* ReelView.swift in Sources */,
+				EA14F77426BDE6D300839FCC /* PlaySound.swift in Sources */,
 				EA73658A26BC3EE3009B26D9 /* Extensions.swift in Sources */,
 				EA73658826BC3B67009B26D9 /* Modifiers.swift in Sources */,
 				EA73656626BC35B4009B26D9 /* ContentView.swift in Sources */,
 				EA73658626BC3B38009B26D9 /* LogoView.swift in Sources */,
 				EA73656426BC35B4009B26D9 /* SlotMachineApp.swift in Sources */,
+				EA14F77226BDD6F600839FCC /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SlotMachine/SlotMachine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SlotMachine/Preview Content\"";
 				DEVELOPMENT_TEAM = P3MY8KZZK3;
@@ -351,6 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramiouunifi.SlotMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SlotMachine/SlotMachine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SlotMachine/Preview Content\"";
 				DEVELOPMENT_TEAM = P3MY8KZZK3;
@@ -373,6 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramiouunifi.SlotMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -41,8 +41,8 @@ struct ScoreContainerModifier: ViewModifier {
             .padding(.horizontal, 16)
             .frame(minWidth: 128)
             .background(
-            Capsule()
-                .foregroundColor(Color("ColorTransparentBlack"))
+                Capsule()
+                    .foregroundColor(Color("ColorTransparentBlack"))
             )
     }
 }
@@ -59,6 +59,55 @@ struct ImageModifier: ViewModifier {
             .modifier(ShadowModifier())
     }
 }
+
+struct BetNumberModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .rounded))
+            .padding(.vertical, 5)
+            .frame(width: 90)
+            .shadow(color: Color("ColorTransparentBlack"),
+                    radius: 0,
+                    x: 0,
+                    y: 3)
+    }
+}
+
+struct BetCapsuleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .background(
+                Capsule()
+                    .fill(LinearGradient(gradient: Gradient(
+                                            colors: [Color("ColorPink"),
+                                                     Color("ColorPurple")]),
+                                         startPoint: .top, endPoint: .bottom))
+            )
+            .padding(3)
+            .background(
+                Capsule()
+                    .fill(LinearGradient(gradient: Gradient(
+                                            colors: [Color("ColorPink"),
+                                                     Color("ColorPurple")]),
+                                         startPoint: .bottom, endPoint: .top))
+                    .modifier(ShadowModifier())
+            )
+    }
+}
+
+struct CasinoChipsModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledToFit()
+            .frame(height: 64)
+            .animation(.default)
+            .modifier(ShadowModifier())
+    }
+}
+
+
+
+
 
 
 
